@@ -36,3 +36,23 @@ ans =countSumofDiff(list1,list2)
 
 
 print("============DAY_1 ANSWER==========",ans)
+
+
+#=============================== PART 2 ==================================
+
+
+def similarity(list1,list2):
+    similarity_score = 0
+    for num in list1:
+        count_in_right =0
+        for x in list2:
+            if x == num:
+                count_in_right+=1
+        similarity_score += num * count_in_right
+    return similarity_score
+
+
+
+
+ # Output the result
+print("Similarity Score:", similarity(list1,list2))
